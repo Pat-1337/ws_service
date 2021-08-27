@@ -1,0 +1,33 @@
+[package]
+name = "ws_service"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "install_service"
+path = "src/install/main.rs"
+
+[[bin]]
+name = "ws_service"
+path = "src/service/main.rs"
+
+[[bin]]
+name = "server"
+path = "src/server/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/client/main.rs"
+
+[[bin]]
+name = "uninstall_service"
+path = "src/uninstall/main.rs"
+
+[dependencies]
+windows-service = "0.4.0"
+tokio-tungstenite = "*"
+tokio = { version = "1.10.1", features = ["full"]}
+futures-util = "0.3.16"
+futures-channel = "0.3.16"
+url = "2.2.2"
+log = "0.4.14"
